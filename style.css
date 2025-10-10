@@ -76,7 +76,7 @@ body{
 #Perguntas .PerguntaCard{
     width: 100%;
     height: 80px;
-    background-image: url('img/question.png');
+    background-image: url('question.png');
     background-size: cover;
     background-position: center center;
     border-radius: 10px 10px 0px 0px;
