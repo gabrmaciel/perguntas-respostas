@@ -1,0 +1,38 @@
+<div id="Perguntas">
+    <div class="Pergunta">
+        <div class="PerguntaBox">
+            <div class="PerguntaCard">
+
+            </div>
+            <div class="PerguntaLoad">
+                <div style="width: 100%; display: flex; justify-content: center">
+                    <img src="img/load.gif" id="PerguntaJogarImg" srcset="">
+                </div>
+                <div id="PerguntaLoadDiv" ></div>
+                <div style="width: 100%; display: flex; justify-content: center">
+                    <div class="PerguntaLoginJogarBtn" id="PerguntaJogar" onclick="SorteiaQuestao()" style="display:none">JOGAR</div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        setTimeout(sorteia, 300);
+    });
+
+    function sorteia() {
+        $("#PerguntaJogarImg").css("display", "none")
+        var numero = Math.floor(Math.random() * 2) +1;
+        if(numero == 1){
+            $("#PerguntaLoadDiv").append("Jogador azul!");
+            $("#QuemComeca").val("Azul")
+        }else{
+            $("#PerguntaLoadDiv").append("Jogador vermelho!")
+            $("#QuemComeca").val("Vermelho")
+        }
+        $("#PerguntaJogar").css("display", "block")
+    }
+
+</script>

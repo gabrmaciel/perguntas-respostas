@@ -1,0 +1,28 @@
+<div id="Perguntas">
+    <div class="Pergunta">
+        <div class="Parabens">
+            <div>Parabéns,&nbsp;</div>
+            <div class="ParabensCor"></div>
+            <div>! Você acertou!</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".ParabensCor").html($("#QuemComeca").val());
+
+        setTimeout(ProximaPergunta, 2000);
+    });
+
+    function ProximaPergunta(){
+        var quemComeca = $("#QuemComeca").val();
+
+        if(quemComeca == "Azul"){
+            $("#QuemComeca").val("Vermelho");
+        }else if(quemComeca == "Vermelho"){
+            $("#QuemComeca").val("Azul");
+        }
+        SorteiaQuestao();
+    }
+</script>

@@ -1,0 +1,60 @@
+<div id="Perguntas">
+    <div class="Pergunta">
+        <div class="PerguntaBox">
+            <div class="PerguntaSuaVez">
+                <div>Sua vez,&nbsp;</div>
+                <div>Azul</div>
+            </div>
+            <div class="PerguntaCard">
+
+            </div>
+            <div class="PerguntaTitulo" id="PerguntaTitulo">
+            </div>
+            <div class="PerguntaOptions">
+                <div class="PerguntaOptionsOption" id="PerguntasOptionA" onclick="SelecionaPergunta('A')"></div>
+                <div class="PerguntaOptionsOption" id="PerguntasOptionB" onclick="SelecionaPergunta('B')"></div>
+                <div class="PerguntaOptionsOption" id="PerguntasOptionC" onclick="SelecionaPergunta('C')"></div>
+                <div class="PerguntaOptionsOption" id="PerguntasOptionD" onclick="SelecionaPergunta('D')"></div>
+                <div class="PerguntaOptionsOption" id="PerguntasOptionE" onclick="SelecionaPergunta('E')"></div>
+            </div>
+            <div class="PerguntaPlacar">
+                <div class="PerguntaPlacarAzul">
+                    <div>Azul:&nbsp;</div>
+                    <div id="PerguntaPlacarAzul">0</div>
+                </div>
+                <div class="PerguntaPlacarVermelho">
+                    <div>Vermelho:&nbsp;</div>
+                    <div id="PerguntaPlacarVermelho">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        console.log(questoes[0]);
+
+        var numeroQuestao = $("#NumeroPerguntaSorteada").val();
+        var questoesA = questoes[numeroQuestao][1].split("|");
+        var questoesB = questoes[numeroQuestao][2].split("|");
+        var questoesC = questoes[numeroQuestao][3].split("|");
+        var questoesD = questoes[numeroQuestao][4].split("|");
+        var questoesE = questoes[numeroQuestao][5].split("|");
+
+        $("#PerguntaTitulo").html(questoes[numeroQuestao][0]);
+        $("#PerguntasOptionA").html(questoesA[0]);
+        $("#PerguntasOptionB").html(questoesB[0]);
+        $("#PerguntasOptionC").html(questoesC[0]);
+        $("#PerguntasOptionD").html(questoesD[0]);
+        $("#PerguntasOptionE").html(questoesE[0]);
+
+        var numeroPartidas = $("#NumeroPartidas").val();
+        numeroPartidas = parseInt(numeroPartidas);
+        $("#NumeroPartidas").val(numeroPartidas + 1);
+
+        $("#PerguntaPlacarAzul").html($("#PlacarJogadorAzul").val());
+        $("#PerguntaPlacarVermelho").html($("#PlacarJogadorVermelho").val());
+    });
+
+</script>
