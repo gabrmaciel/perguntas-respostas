@@ -114,8 +114,8 @@ body{
 
 #Perguntas .PerguntaLoginAzul{
     width: 100%;
-    border: 1px solid blue;
-    border-bottom: 4px solid blue;
+    border: 1px solid #7f6ee1;
+    border-bottom: 4px solid #5b4f9e;
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 10px;
