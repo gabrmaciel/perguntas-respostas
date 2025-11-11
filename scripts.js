@@ -120,3 +120,9 @@ function SorteiaQuestao(){
     $("#NumeroPerguntaSorteada").val(numero);
     App('perguntas-respostas');
 }
+
+function JogarNovamente(){
+    $("#NumeroPartidas").val(0);
+    $("#PlacarJogador").val(0);
+    SorteiaQuestao();
+}

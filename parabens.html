@@ -8,10 +8,19 @@
 
 <script>
     $(document).ready(function(){
-        setTimeout(ProximaPergunta, 2000);
+        var numero_partidas = $("#NumeroPartidas").val();
+        if(numero_partidas > 9){
+            setTimeout(AbrePlacarGeral, 2000);
+        }else{
+            setTimeout(ProximaPergunta, 2000);
+        }
     });
 
     function ProximaPergunta(){
         SorteiaQuestao();
+    }
+
+    function AbrePlacarGeral(){
+        App('placarGeral');
     }
 </script>
