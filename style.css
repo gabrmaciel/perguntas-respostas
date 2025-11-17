@@ -199,6 +199,11 @@ body{
     color: #FFF;
 }
 
+#Perguntas .PlacarMobile{
+    display: none;
+}
+
+
 @media (max-width: 1280px){
     #App {
         padding: 0 2%;
@@ -211,6 +216,14 @@ body{
 
     .grid{
         width: calc(33.3% - 15px);
+    }
+
+    #Perguntas .Placar{
+        display: none !important;
+    }
+
+    #Perguntas .PlacarMobile{
+        display: block;
     }
 
     

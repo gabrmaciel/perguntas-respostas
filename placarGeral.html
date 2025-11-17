@@ -1,10 +1,15 @@
 <div id="Perguntas">
     <div class="Pergunta">
         <div class="Parabens" style="flex-direction: column">
-            <div style="float: left; width: 100%; display: flex">
+            <div style="float: left; width: 100%; display: flex" class="Placar">
                 <div>Fim de jogo! Você acertou o total de &nbsp;</div>
                 <div id="PlacarTotal"></div>
                 <div>&nbsp; questões.</div>
+            </div>
+            <div class="PlacarMobile">
+                <div style="display: contents; float: left">Fim de jogo! Você acertou o total de &nbsp;</div>
+                <div style="display: contents; float: left" id="PlacarTotalMobile"></div>
+                <div style="display: contents; float: left">&nbsp; questões.</div>
             </div>
             <div style="float: left; width: 100%; display: flex; justify-content: center">
                 <div class="PerguntaLoginJogarBtn" style="width: 150px; font-size: 18px" onclick="JogarNovamente()">Jogar novamente</div>
@@ -17,5 +22,6 @@
     $(document).ready(function(){
         var placar_geral = $("#PlacarJogador").val();
         $("#PlacarTotal").html(placar_geral);
+        $("#PlacarTotalMobile").html(placar_geral);
     });
 </script>
