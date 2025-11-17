@@ -203,6 +203,36 @@ body{
     display: none;
 }
 
+.QRCode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.QRCodeH1{
+    float: left;
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+}
+
+.QRCodeImagem{
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    margin-top: 40px
+}
+
+.QRCodeImagem img{
+    max-width: 40%;
+    height: fit-content;
+}
 
 @media (max-width: 1280px){
     #App {
@@ -226,6 +256,10 @@ body{
         display: block;
     }
 
+    #Perguntas .PerguntaOptionsOption:hover{
+        background-color: #FFF;
+        color: #333;
+    }
     
 }
 
