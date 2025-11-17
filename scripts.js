@@ -42,7 +42,7 @@ function App(page, param){
 }
 
 function MostraPergunta(){
-    alert("ok")
+    //alert("ok")
 }
 
 function SelecionaPergunta(param){
@@ -115,10 +115,34 @@ function SelecionaPergunta(param){
     $(".PerguntaOptions").css("pointer-events", "none");
 }
 
+let numero_array = [];
+
 function SorteiaQuestao(){
+    console.log("NumeroPerguntaSorteada: "+$("#NumeroPerguntaSorteada").val())
+    console.log(numero_array)
+
+    if($("#NumeroPartidas").val() == "0"){
+        numero_array = [];
+    }else{
+        numero_array.push(parseInt($("#NumeroPerguntaSorteada").val()));
+    }
+    
     var numero = Math.floor(Math.random() * 30);
+
+    if(numero_array.includes(numero)){
+        SorteiaQuestao();
+    }else{
+        App('perguntas-respostas');
+    }
+    
     $("#NumeroPerguntaSorteada").val(numero);
-    App('perguntas-respostas');
+}
+
+function SorteiaQuestao2(){
+    
+    
+   
+   
 }
 
 function JogarNovamente(){
